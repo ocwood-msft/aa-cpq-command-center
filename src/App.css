@@ -1,0 +1,469 @@
+.shell {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 260px;
+  flex: none;
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 18px 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: var(--panel-2);
+}
+
+.nav-item.active {
+  background: var(--panel-2);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.nav-label {
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.nav-hint {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 12px 8px 4px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+
+.footer-value {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* ---------- Main ---------- */
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 34px 60px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.page-sub {
+  color: var(--text-dim);
+  font-size: 13.5px;
+  margin: 0 0 22px;
+}
+
+/* ---------- KPI cards ---------- */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.kpi-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.kpi-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.kpi-label {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.kpi-accent {
+  color: var(--accent);
+}
+
+/* ---------- Lifecycle ---------- */
+.lifecycle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.lifecycle-step {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.lifecycle-step:hover {
+  border-color: var(--accent);
+}
+
+.lifecycle-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.lifecycle-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.lifecycle-pain {
+  font-size: 12px;
+  color: var(--warn);
+  margin-bottom: 6px;
+}
+
+.lifecycle-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+/* ---------- Panels / cards ---------- */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.panel-title {
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0 0 12px;
+}
+
+/* ---------- Tables ---------- */
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+table.data th {
+  text-align: left;
+  color: var(--text-dim);
+  font-weight: 600;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+}
+
+table.data td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+table.data tbody tr {
+  cursor: pointer;
+}
+
+table.data tbody tr:hover {
+  background: var(--panel-2);
+}
+
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.pill-bespoke {
+  background: rgba(200, 16, 46, 0.18);
+  color: #ff7a8a;
+}
+
+.pill-templated {
+  background: rgba(26, 58, 107, 0.35);
+  color: #7fb0ff;
+}
+
+.pill-good {
+  background: rgba(46, 204, 113, 0.18);
+  color: var(--good);
+}
+
+.pill-warn {
+  background: rgba(242, 169, 0, 0.18);
+  color: var(--warn);
+}
+
+.pill-bad {
+  background: rgba(229, 72, 77, 0.18);
+  color: var(--bad);
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 320px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.tab-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.tab-btn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--accent-2);
+  color: white;
+  border-color: var(--accent-2);
+}
+
+/* ---------- Drawer ---------- */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 18, 0.6);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 50;
+}
+
+.drawer {
+  width: 560px;
+  max-width: 92vw;
+  background: var(--panel);
+  border-left: 1px solid var(--border);
+  height: 100%;
+  overflow-y: auto;
+  padding: 24px 26px 60px;
+}
+
+.drawer-close {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+}
+
+.slider-row {
+  margin: 16px 0;
+}
+
+.slider-row label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.callout {
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 12.5px;
+  margin-top: 10px;
+  border: 1px solid var(--border);
+}
+
+.callout-good {
+  border-color: rgba(46, 204, 113, 0.4);
+  background: rgba(46, 204, 113, 0.08);
+}
+
+.callout-warn {
+  border-color: rgba(242, 169, 0, 0.4);
+  background: rgba(242, 169, 0, 0.08);
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.metric-row .k {
+  color: var(--text-dim);
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.contract-preview {
+  background: #0d1526;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  font-family: "Cambria", Georgia, serif;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.kanban-col {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  min-height: 200px;
+}
+
+.kanban-col h4 {
+  font-size: 12.5px;
+  margin: 4px 6px 12px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.kanban-card {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  font-size: 12.5px;
+}
+
+.kanban-card .agency {
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.kanban-card .meta {
+  color: var(--text-dim);
+  font-size: 11px;
+}
